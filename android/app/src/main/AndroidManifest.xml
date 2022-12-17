@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.rhodes.thence.thence">
+    <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="thence"
         android:name="${applicationName}"

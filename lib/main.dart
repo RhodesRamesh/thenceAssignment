@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thence/routers/router.dart';
+import 'package:google_fonts/google_fonts.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -19,6 +21,9 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       initialRoute: GetPageRouters.splashScreenPage,
+      theme: ThemeData(
+        textTheme: GoogleFonts.montserratTextTheme()
+      ),
       getPages: GetPageRouters.pages,
     );
   }
