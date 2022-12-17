@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:thence/entity/Data.dart';
 import 'package:thence/entity/ResponseEntity.dart';
@@ -9,6 +10,7 @@ class HomeController extends GetxController{
   RxInt selectedBottomNavIndex = 0.obs;
   List<Data> plants = <Data>[].obs;
 
+  @visibleForTesting
   Future getData() async {
     plants.clear();
     final res = await Dio().get("https://www.jsonkeeper.com/b/6Z9C");
@@ -31,7 +33,6 @@ class HomeController extends GetxController{
   }
 
   updateBotomNavIndex(int v) {
-    print(v);
     selectedBottomNavIndex.value = v;
   }
 
